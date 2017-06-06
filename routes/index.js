@@ -133,6 +133,11 @@ router.delete('/quizzes/:quizId(\\d+)/tips/:tipId(\\d+)',
     tipController.destroy);
 
 
+//añadido en practica 5.2
+router.get('/quizzes/randomplay',  quizController.randomplay);
+router.get('/quizzes/randomcheck/:quizId(\\d+)', quizController.randomcheck);
+
+
 
 // Pagina de ayuda
 router.get('/help', function(req, res, next) {
